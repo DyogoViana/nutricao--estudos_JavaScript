@@ -20,7 +20,7 @@ header h1{
 	vertical-align:	middle;
 }
 header h2{
-	font-size: 2em;
+	font-size: 2rem;
 	display:inline-block;
 	vertical-align:	middle;
 }
@@ -44,7 +44,7 @@ section{
 }
 
 section h2{
-	font-size: 3em;
+	font-size: 3rem;
 	display: block;
 	padding-bottom: .5em;
 	border-bottom: 1px solid #ccc;
@@ -100,7 +100,7 @@ button{
 	padding: .5em 2em;
 	border: 0;
 	border-bottom: 3px solid;
-	font-size: 1.2em;
+	font-size: 1.2rem;
 	cursor: pointer;
 	margin: 0;
 	margin-top: -3px;
