@@ -39,4 +39,4 @@ if (alturaValida && pesoValido) {
     tdImc.textContent = imc;
 }
 
-tdImc.textContent = imc;
+// tdImc.textContent = imc;
