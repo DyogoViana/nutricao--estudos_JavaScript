@@ -1,8 +1,3 @@
-// mudar título do h1.
-var titulo = document.querySelector(".titulo");
-titulo.textContent = "Aparecida Nutricionista";
-
-
 // IMC = peso / altura * altura
 var pacientes = document.querySelectorAll (".paciente");
 
@@ -26,16 +21,18 @@ for (var i = 0; i < pacientes.length; i++) {
     var pesoValido = true;
     var alturaValida = true;
 
-    if (peso <= 0 || peso >= 1000) {
+    if (peso <= 0 || peso >= 300) {
         console.log ("Peso inválido!");
         pesoValido = false;
         tdImc.textContent = "Peso inválido!";
+        paciente.classList.add ("paciente-invalido")
     }
 
     if (altura <=0 || altura >= 3.00) {
         console.log ("Altura inválida!");
         alturaValida = false;
         tdImc.textContent = "Altura inválida!";
+        paciente.classList.add ("paciente-invalido")
     }
 
     if (alturaValida && pesoValido) {

@@ -25,6 +25,16 @@ header h2{
 	vertical-align:	middle;
 }
 
+h3{
+	font-size: 2rem;
+	padding-bottom: .5em;
+	padding-top: .5em;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: .5em;
+	display:inline-block;
+	vertical-align:	middle;
+}
+
 header .container:before{
 	content: '';
 	display:inline-block;

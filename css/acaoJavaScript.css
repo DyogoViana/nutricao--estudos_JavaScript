@@ -1,0 +1,7 @@
+/*Ações feitas pelo JavaScript*/
+
+/*Muda a cor para alertar algum dado inválido do paciente*/
+.paciente-invalido {
+    color: white;
+    background: tomato;
+}

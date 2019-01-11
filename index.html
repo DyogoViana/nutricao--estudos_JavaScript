@@ -2,19 +2,20 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
-		<title>Aparecida Nutrição</title>
+		<title>Pollyana Nutrição</title>
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
-
+		<link rel="stylesheet" href="css/acaoJavaScript.css">
 	</head>
 	<body>
 
 		<header>
 			<div class="container">
-				<h1 class="titulo">Aparecida Nutrição</h1>
+				<h1 class="titulo">Pollyana Nutrição</h1>
 			</div>
 		</header>
+
 		<main>
 			<section class="container">
 				<h2>Meus pacientes</h2>
@@ -28,6 +29,7 @@
 							<th>IMC</th>
 						</tr>
 					</thead>
+
 					<tbody id="tabela-pacientes">
 						<tr id="primeiro-paciente" class="paciente" >
 							<td class="info-nome">Dyogo</td>
@@ -55,11 +57,12 @@
 
 						<tr class="paciente">
 							<td class="info-nome">David Blaine</td>
-							<td class="info-peso">89</td>
+							<td class="info-peso">899</td>
 							<td class="info-altura">1.83</td>
 							<td class="info-gordura">24</td>
 							<td class="info-imc">0</td>
 						</tr>
+
 						<tr class="paciente">
 							<td class="info-nome">Alice</td>
 							<td class="info-peso">46</td>
@@ -69,11 +72,40 @@
 						</tr>
 					</tbody>
 				</table>
-
 			</section>
 		</main>
 
+		<!-- Formulário para adicionar novos pacientes -->
+		<section class="container">
+			<h3 id="titulo-form">Adicionar novo paciente</h3>
+
+			<form>
+				<div class="grupo">	
+					<label for="nome">Nome:</label>
+					<input id="nome" class="campo" name="nome" type="text" placeholder="Digite o nome do seu paciente">
+				</div>
+
+				<div class="grupo">
+					<label for="peso">Peso:</label>
+					<input id="peso" name="peso" type="text" placeholder="digite o peso do seu paciente" class="campo campo-medio">
+				</div>
+
+				<div class="grupo">
+					<label for="altura">Altura:</label>
+					<input id="altura" name="altura" type="text" placeholder="digite a altura do seu paciente" class="campo campo-medio">
+				</div>
+				
+				<div class="grupo">
+					<label for="gordura">% de Gordura:</label>
+					<input id="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente" class="campo campo-medio">
+				</div>
+		
+				<button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
+			</form>
+		</section>
+
 		<!-- JavaScript -->
-		<script src="js/main.js"></script>
+		<script src="js/imc.js"></script>
+		<script src="js/form.js"></script>
 	</body>
 </html>
