@@ -55,4 +55,3 @@ botaoAdicionar.addEventListener ("click", function (event) {
 // Acinama tem uma função anônima (sem parâmetro). Ela funciona igual ao exemplo com a função nominada acima.
 
 // console.log (botaoAdicionar); ----> assim pode ser testado e ver se tá realmente chamando o btn.
-
