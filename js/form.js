@@ -37,12 +37,14 @@ botaoAdicionar.addEventListener ("click", function (event) {
     pesoTd.textContent = peso;
     alturaTd.textContent = altura;
     gorduraTd.textContent = gordura;
+    imcTd.textContent = calculaImc (peso, altura);
 
     // Adicionar <td> nas <tr>.
     pacienteTr.appendChild (nomeTd);
     pacienteTr.appendChild (pesoTd);
     pacienteTr.appendChild (alturaTd);
-    pacienteTr.appendChild (gorduraTd);
+    pacienteTr.appendChild (gorduraTd); 
+    pacienteTr.appendChild (imcTd);
 
     // Adicionar o paciente dentro da tabela.
     var tabela = document.querySelector ("#tabela-pacientes");
