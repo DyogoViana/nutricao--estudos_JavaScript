@@ -23,9 +23,29 @@ botaoAdicionar.addEventListener ("click", function (event) {
     // Extraindo informações do paciente do "form".
     var paciente = obtemPacienteDoFormulario (form);
 
-    console.log (paciente);
+    // Criar a <tr> e a <td>  do paciente;
+    var pacienteTr = montaTr (paciente); 
 
-    // Cria a <tr> e a <td> do paciente.
+    // Adicionar o paciente dentro da tabela.
+    var tabela = document.querySelector ("#tabela-pacientes");
+    tabela.appendChild (pacienteTr);
+})
+
+// Objeto paciente.
+function obtemPacienteDoFormulario (form) {
+
+    var paciente = {
+        nome: form.nome.value,
+        peso: form.peso.value,
+        altura: form.altura.value,
+        gordura: form.gordura.value,
+        imc: calculaImc (form.altura.value, form.peso.value)
+    }
+    return paciente;
+}
+
+// Cria a <tr> e a <td> do paciente.
+function montaTr (paciente) {
     var pacienteTr = document.createElement ("tr"); 
 
     var nomeTd = document.createElement ("td");
@@ -47,23 +67,8 @@ botaoAdicionar.addEventListener ("click", function (event) {
     pacienteTr.appendChild (gorduraTd); 
     pacienteTr.appendChild (imcTd);
 
-    // Adicionar o paciente dentro da tabela.
-    var tabela = document.querySelector ("#tabela-pacientes");
-    tabela.appendChild (pacienteTr);
-})
-
-function obtemPacienteDoFormulario (form) {
-
-    var paciente = {
-        nome: form.nome.value,
-        peso: form.peso.value,
-        altura: form.altura.value,
-        gordura: form.gordura.value,
-        imc: calculaImc (form.altura.value, form.peso.value)
-    }
-    return paciente;
+    return pacienteTr;
 }
-
 
 
 // Acinama tem uma função anônima (sem parâmetro). Ela funciona igual ao exemplo com a função nominada acima.
