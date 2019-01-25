@@ -29,6 +29,9 @@ botaoAdicionar.addEventListener ("click", function (event) {
     // Adicionar o paciente dentro da tabela.
     var tabela = document.querySelector ("#tabela-pacientes");
     tabela.appendChild (pacienteTr);
+
+    //Resetar os campos após clicar no botão adicionar.
+    form.reset ();
 })
 
 // Objeto paciente.
@@ -41,33 +44,36 @@ function obtemPacienteDoFormulario (form) {
         gordura: form.gordura.value,
         imc: calculaImc (form.altura.value, form.peso.value)
     }
+    
     return paciente;
 }
 
-// Cria a <tr> e a <td> do paciente.
+// Cria a <tr> com as classes também.
 function montaTr (paciente) {
+
     var pacienteTr = document.createElement ("tr"); 
-
-    var nomeTd = document.createElement ("td");
-    var pesoTd = document.createElement ("td");
-    var alturaTd = document.createElement ("td");
-    var gorduraTd = document.createElement ("td");
-    var imcTd = document.createElement ("td");
     
-    nomeTd.textContent = nome;
-    pesoTd.textContent = peso;
-    alturaTd.textContent = altura;
-    gorduraTd.textContent = gordura;
-    imcTd.textContent = calculaImc (peso, altura);
+    //Criando classes aos elementos.
+    pacienteTr.classList.add ("paciente");
 
-    // Adicionar <td> nas <tr>.
-    pacienteTr.appendChild (nomeTd);
-    pacienteTr.appendChild (pesoTd);
-    pacienteTr.appendChild (alturaTd);
-    pacienteTr.appendChild (gorduraTd); 
-    pacienteTr.appendChild (imcTd);
+    // Adicionar <td> nas <tr>, criando como filho do <tr> e monta uma <td> com as classes.
+    pacienteTr.appendChild (montaTd (paciente.nome, "info-nome"));
+    pacienteTr.appendChild (montaTd (paciente.peso, "info-peso"));
+    pacienteTr.appendChild (montaTd (paciente.altura, "info-altura"));
+    pacienteTr.appendChild (montaTd (paciente.gordura, "info-gordura")); 
+    pacienteTr.appendChild (montaTd (paciente.imc, "info-imc"));
 
     return pacienteTr;
+}
+
+// Cria uma <td> juntamente com as classes.
+function montaTd (dado, classe) {
+    
+    var td =document.createElement ("td");
+    td.textContent = dado;
+    td.classList.add (classe);
+
+    return td;
 }
 
 

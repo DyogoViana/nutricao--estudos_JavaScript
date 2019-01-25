@@ -17,3 +17,6 @@ Neste capítulo implementamos a criação de usuários a partir de um formulári
 --------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------
+
+<!-- Melhorando o código, Adicionando classes aos elementos. Aula 05 -->
+https://cursos.alura.com.br/course/javascript-programando-na-linguagem-web/task/24337
