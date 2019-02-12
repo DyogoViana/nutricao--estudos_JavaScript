@@ -15,7 +15,7 @@ for (var i = 0; i < pacientes.length; i++) {
 
     // Selecionando a coluna do IMC
     var tdImc = paciente.querySelector (".info-imc");
-    var imc = peso / (altura * altura); // calculo, 100 / 2 * 2 = 25
+    // var imc = peso / (altura * altura);
 
     // Validação das medidas.
     var pesoValido = true;
