@@ -26,6 +26,12 @@ botaoAdicionar.addEventListener ("click", function (event) {
     // Criar a <tr> e a <td>  do paciente;
     var pacienteTr = montaTr (paciente); 
 
+    // Mensagem de aviso para dados inválidos.
+    if (!validaPaciente (paciente)) {
+        console.log ("Paciente inválido!");
+        return;
+    }
+
     // Adicionar o paciente dentro da tabela.
     var tabela = document.querySelector ("#tabela-pacientes");
     tabela.appendChild (pacienteTr);
@@ -42,7 +48,7 @@ function obtemPacienteDoFormulario (form) {
         peso: form.peso.value,
         altura: form.altura.value,
         gordura: form.gordura.value,
-        imc: calculaImc (form.altura.value, form.peso.value)
+        imc: calculaImc (form.peso.value, form.altura.value)
     }
     
     return paciente;
@@ -69,12 +75,22 @@ function montaTr (paciente) {
 // Cria uma <td> juntamente com as classes.
 function montaTd (dado, classe) {
     
-    var td =document.createElement ("td");
+    var td = document.createElement ("td");
     td.textContent = dado;
     td.classList.add (classe);
 
     return td;
 }
+
+// Testa as propriedades com 'peso' e 'altura', para verificar se os valores são válidos.
+function validaPaciente (paciente) {
+
+    if (validaPeso (paciente.peso)) {
+        return true;
+    } else {
+        return false;
+    }
+} 
 
 
 // Acinama tem uma função anônima (sem parâmetro). Ela funciona igual ao exemplo com a função nominada acima.
