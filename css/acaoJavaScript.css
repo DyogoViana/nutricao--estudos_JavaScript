@@ -5,3 +5,12 @@
     color: white;
     background: tomato;
 }
+
+/* Mensagem de aviso para os dados inválidos. */
+#mensagem-erro {
+    font-size: 1rem;
+    font-style: italic;
+    color: tomato;
+    margin-left: 2em;
+    position: relative;
+}

@@ -18,7 +18,7 @@ for (var i = 0; i < pacientes.length; i++) {
     // var imc = peso / (altura * altura);
 
     // Validação das medidas.
-    var pesoValido = validaPeso (peso);
+    var pesoValido = validaPeso (peso); // True or False.
     var alturaValida = validaAltura (altura);
 
     if (!pesoValido) {
