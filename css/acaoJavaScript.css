@@ -7,7 +7,7 @@
 }
 
 /* Mensagem de aviso para os dados inválidos. */
-#mensagem-erro {
+#mensagens-erro {
     font-size: 1rem;
     font-style: italic;
     color: tomato;
