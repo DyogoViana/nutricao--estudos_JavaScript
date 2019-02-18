@@ -1,4 +1,4 @@
-// ações no formulário.
+// form.js
 
 // mudar título do h1.
 var titulo = document.querySelector(".titulo");
@@ -49,7 +49,7 @@ botaoAdicionar.addEventListener ("click", function (event) {
     mensagensErro.innerHTML = "";
 })
 
-// Exibe mensagens de erros.
+// Exibe mensagens de erros --- forEach = pecorre o array.
 function exibeMensagensDeErro (erros) {
 
     var ul = document.querySelector ("#mensagens-erro");
