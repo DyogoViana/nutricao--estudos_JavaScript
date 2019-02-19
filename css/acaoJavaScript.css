@@ -25,3 +25,10 @@
 .invisivel {
     display: none;
 }
+
+/* Resposta ao usuário, caso haja um erro na busca dos pacientes (erro no Ajax). */
+#erro-ajax {
+	font-size: 1rem;
+    font-style: italic;
+    color: tomato;
+}

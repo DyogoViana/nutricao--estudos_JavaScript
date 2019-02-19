@@ -1,5 +1,7 @@
 // form.js
 
+
+
 // mudar título do h1.
 var titulo = document.querySelector(".titulo");
 titulo.textContent = "Pollyana Nutricionista";
@@ -23,23 +25,18 @@ botaoAdicionar.addEventListener ("click", function (event) {
     // Extraindo informações do paciente do "form".
     var paciente = obtemPacienteDoFormulario (form);
 
-    // Criar a <tr> e a <td>  do paciente;
-    var pacienteTr = montaTr (paciente); 
-
     // Erro na validação do paciente e mensagem de aviso para os dados inválidos.
     var erros =  validaPaciente (paciente);
-    
     console.log (erros);
-
+    
     if (erros.length > 0) {
         exibeMensagensDeErro (erros);
-        // form.reset ();
+        form.reset ();
         return;
     }
 
-    // Adicionar o paciente dentro da tabela.
-    var tabela = document.querySelector ("#tabela-pacientes");
-    tabela.appendChild (pacienteTr);
+    // Adiciona pacientes na tabela.
+    adicionaPacienteNaTabela (paciente);
 
     //Resetar os campos após clicar no botão adicionar.
     form.reset ();
@@ -48,6 +45,14 @@ botaoAdicionar.addEventListener ("click", function (event) {
     var mensagensErro = document.querySelector ("#mensagens-erro");
     mensagensErro.innerHTML = "";
 })
+
+// Função para adicionar paciente na tabela.
+function adicionaPacienteNaTabela (paciente) {
+
+    var pacienteTr = montaTr (paciente); // Criar a <tr> e a <td>  do paciente;
+    var tabela = document.querySelector ("#tabela-pacientes"); // Adicionar o paciente dentro da tabela.
+    tabela.appendChild (pacienteTr);
+}
 
 // Exibe mensagens de erros --- forEach = pecorre o array.
 function exibeMensagensDeErro (erros) {
