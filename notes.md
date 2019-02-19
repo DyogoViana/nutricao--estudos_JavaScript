@@ -20,3 +20,17 @@ Neste capítulo implementamos a criação de usuários a partir de um formulári
 
 <!-- Melhorando o código, Adicionando classes aos elementos. Aula 05 -->
 https://cursos.alura.com.br/course/javascript-programando-na-linguagem-web/task/24337
+
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+
+<!-- Estudar expressões regulares. -->
+https://cursos.alura.com.br/course/expressoes-regulares
+
+<!-- As expressões regulares são um tipo especial de texto, que nos auxilia a buscarmos por strings, facilitando quando o termo for maior. Pode ser uma busca simples, como no nosso caso, em que queremos identificar quais nomes contêm determinadas letras; ou casos complexos, se queremos pesquisar se o parágrafo contém a palavra "nome", por exemplo, é como quando os editores de texto buscam por uma palavra usando o comando "CTRL + F". -->
+
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+

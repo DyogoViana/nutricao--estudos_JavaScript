@@ -20,3 +20,8 @@
     opacity: 0;
     transition: .5s;
 }
+
+/* Deixa invisível ao filtrar os pacientes. */
+.invisivel {
+    display: none;
+}
